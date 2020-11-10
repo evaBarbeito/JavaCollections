@@ -10,6 +10,11 @@ import java.util.Queue;
 
 
 public class Exercici4 {
+	
+	
+//	Donada una cua, fes una funció per obtenir els elements a la inversa. Implementa una versió utilitzant un iterador,
+//	i una versió sense utilitzar iterador. Ambdós casos funcionaran per qualsevol implementació de cua? 
+
     public static void main(String[] args) {
         Deque<String> cua1 = new LinkedList<String>();
         Deque<String> cua2 = new ArrayDeque<>();
