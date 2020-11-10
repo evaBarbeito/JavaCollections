@@ -44,6 +44,22 @@ public class DemoGenerics<T,Y> {
 		
 		System.out.println(demoA.getObj()+ ", " + demoA.getMessage() + "\n" + demo.getObj() + "\n" + demo1.getObj() + ", " + demo1.getMessage());
 		
+		
+		//exemple de lambda i interfície genèrica funcional
+		Message<String> message;
+		message= (m) ->{
+			return m;
+		};
+		System.out.println(message.displayMessage("Hello there"));
+		
+		Message<Integer> message1;
+		message1= (m) ->{
+			return m;
+		};
+		System.out.println(message1.displayMessage(100));
+		
 	}
 
 }
+
+

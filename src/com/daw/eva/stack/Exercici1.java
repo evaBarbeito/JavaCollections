@@ -23,7 +23,7 @@ public class Exercici1 {
     	miss.offer("4");
     	System.out.println("Exemple LinkedList com a implementació de queue");
     	while (miss.size()>0) {
-    		System.out.println(miss.poll());  //recupera i elimina el cap de la cua
+    		System.out.println(miss.poll());  //recupera i elimina el cap de la cua, primer element de la llista
     	}
     	System.out.println();
     	
@@ -76,7 +76,7 @@ public class Exercici1 {
         }
         
         //cpStack=stack;
-        System.out.println(stack);
+       // System.out.println(stack);
         
         while (!cpStack.isEmpty()) {
             inversStack.push(cpStack.pop());
