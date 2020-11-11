@@ -18,7 +18,7 @@ public class Exercici1 {
     	
     	Queue<String> miss=new LinkedList<String>(); //admet nulls, arraydeque és més ràpida
     	miss.offer("1");
-    	miss.offer("2");
+    	miss.offer("2");//offer: encua, posa element a última posició de la llista
     	miss.offer("3");
     	miss.offer("4");
     	System.out.println("Exemple LinkedList com a implementació de queue");
@@ -26,6 +26,8 @@ public class Exercici1 {
     		System.out.println(miss.poll());  //recupera i elimina el cap de la cua, primer element de la llista
     	}
     	System.out.println();
+    	
+    	
     	
     	Deque<Integer> stackDeque = new ArrayDeque<Integer>();
         
@@ -40,18 +42,21 @@ public class Exercici1 {
         stackDeque.push(elem4);
         
         printDeque(stackDeque, "Deque (pila) original:");
+        System.out.println(stackDeque);
         
         System.out.println();
     
         invertirPilaNoGeneric(stackDeque);
         System.out.println();
-        invertirPila(stackDeque);    
+        invertirPila(stackDeque); 
+        
         
         System.out.println();
         displayMessage("Exemple de mètode genèric a una classe normal, no genèrica");
         displayMessage(12345);
         
     }
+    
     
     //https://moodle.escoladeltreball.org/pluginfile.php/47410/mod_resource/content/2/M03%20Block%202%20-%20UF5%20-%20NF1%20-%20teoria%200.pdf
     
@@ -61,6 +66,7 @@ public class Exercici1 {
     	System.out.println(m);
     }
 
+    
     //exemple de generic bounded types
     //per si volem restringir els tipus a passar a classes o mètodes genèrics
     // p.ex només números, no strings...  Number:float, Integer, double
@@ -70,19 +76,18 @@ public class Exercici1 {
     
     public static void invertirPilaNoGeneric(Deque<Integer> stack) {
         Deque<Integer> inversStack = new ArrayDeque<Integer>();
-        Deque<Integer> cpStack = new ArrayDeque<Integer>();
+        Deque<Integer> cpStack = new ArrayDeque<Integer>();   //la copio per no perdre-la de cara a segona crida, invertirPila
         for (Integer elem:stack){
-            cpStack.push(elem);
+            cpStack.offer(elem);   //no era push, sino offer:encuar   push fa tractament de pila:apila
+           // System.out.println(elem.toString()); //4,3,2,1
         }
         
-        //cpStack=stack;
-       // System.out.println(stack);
         
         while (!cpStack.isEmpty()) {
-            inversStack.push(cpStack.pop());
+            inversStack.push(cpStack.pop());  //pop & push, desapilar per apilar a l'altra
         }
         printDeque(inversStack, "Deque (pila) invertida amb mètode no genèric:");
-        System.out.println(stack);
+        System.out.println(inversStack);
     }
     
     //Exercici 1
@@ -93,7 +98,9 @@ public class Exercici1 {
       
         }
         printDeque(inversStack, "Deque (pila) invertida amb mètode genèric:");
+        System.out.println(inversStack);
     }
+    
     
     //public static  void printDeque(Deque<?> stack, String text) {
     public static <T> void printDeque(Deque<T> stack, String text) {
