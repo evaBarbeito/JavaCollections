@@ -72,7 +72,7 @@ public class Persona {
 //		result = prime * result + edat;
 //		result = prime * result + ((nom == null) ? 0 : nom.hashCode());
 //		return result;
-		return this.nom.hashCode();
+		return this.nom.hashCode();  //ordena per nom
 	}
 
 
@@ -121,7 +121,8 @@ public class Persona {
 		 persones.add(new Persona("P1", "1111111Z", 23));    
 		 persones.add(new Persona("P2", "2222222Z", 24));  
 		 persones.add(new Persona("P3", "3333333Z", 25));  
-		 persones.add(new Persona("P3", "3333333Z", 28));   // Aquest està repe per culpa del hash i l'equals()   
+		 persones.add(new Persona("P3", "3333333Z", 28));   // Aquest està repe per l'equals()   i pel hash
+		 persones.add(new Persona("P1", "1111111T", 28));   // Aquest no està repe per l'equals()   i ordena pel hash
 		 persones.add(new Persona("P3", "6666666Z", 25));   // Aquest no està repe per culpa del l'equals()    
 		 persones.add(new Persona("P4", "3333333Z", 25));   // Sense ordre i sense definir operació hashCode aquesta iteració retorna ordres aleatoris ; comentar hashcode:ordena pel nom   
 		 // Cada vegada es calcula hashCode diferent    

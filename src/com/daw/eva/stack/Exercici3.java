@@ -2,10 +2,12 @@ package com.daw.eva.stack;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
+import java.util.LinkedList;
+import java.util.Queue;
 
 
 
-public class MinaDiamants {
+public class Exercici3 {
     public static void main(String[] args) {
         String[] mina = {"<","<","(",")",">",">"};
 
