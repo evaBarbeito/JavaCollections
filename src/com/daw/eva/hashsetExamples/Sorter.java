@@ -12,6 +12,21 @@ import java.util.TreeSet;
 
 public class Sorter {
     public static void main(String[] args) {
+    	
+    	
+    	SortedSet set=new TreeSet();
+    	
+    	set.add("b");
+    	set.add("c");
+    	set.add("a");
+    	
+    	Iterator i=set.iterator();
+    	while (i.hasNext()) {
+         
+            System.out.println(i.next());
+        }
+    	System.out.println();
+    	
         // TreeSet is an implementation of SortedSet
         SortedSet<Employee> setEmpleats = new TreeSet<Employee>(); //ordre sorted ascending order, o interfície Comparable per a objectes
 
@@ -35,7 +50,11 @@ public class Sorter {
             System.out.println("Empleat " + epm.getName() + ", edat: " + epm.getAge());
         }
 
-        // Test comparator(), comparator will be null as we are using the Comparable interface
+        // Test comparator(), comparator will be null as we are using the Comparable interface, Comparator:interficie que implementa mètode compare(o1,o2)
+        // System.out.println("LLista ordenada en funció d'un Comparator:");
+        //ColorComparator colorComparator = new ColorComparator();
+        //Collections.sort(fruits, colorComparator);
+        
         System.out.println();
         System.out.println("Employee Set Comparator: " + setEmpleats.comparator());
 

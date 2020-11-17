@@ -16,9 +16,9 @@ public class ExempleSet {
         setB.add(4);
         setB.add(5);
 
-        setA.addAll(setB);
-        setA.removeAll(setB);
-        System.out.println("A: "+setA);
+//        setA.addAll(setB);
+//        setA.removeAll(setB);
+//        System.out.println("A: "+setA);
         
         setA.retainAll(setB);//intersecció
         System.out.println("A: "+setA);
