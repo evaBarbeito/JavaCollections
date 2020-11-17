@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  *
- * @author 
+ *  
  */
 public class exercici1_i_2 {
     public static void main(String args[]) {

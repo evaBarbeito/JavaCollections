@@ -17,7 +17,7 @@ public class exercici4 {
         //Passar arguments al main:
         //  Run --> Set Project Configuration --> Customize:
 	//      1. Marcar la "Main Class" amb btn Browse
-	//      2. Ficar en Arguments els arguments que volem passar al main
+	//      2. Posar en Arguments els arguments que volem passar al main
 	//      3. Picar al btn de Run Project (triangle verd) perquè fer btn dret sobre la .java i fer "run" no funciona.
         
         //Per definicio en un set tots els elements son diferents per tant no cal fer res mes.

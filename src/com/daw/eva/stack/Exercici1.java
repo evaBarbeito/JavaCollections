@@ -21,6 +21,7 @@ public class Exercici1 {
     	miss.offer("2");//offer: encua, posa element a última posició de la llista
     	miss.offer("3");
     	miss.offer("4");
+    	//no té mètodes per a apilar, com Deque, push, etc.
     	System.out.println("Exemple LinkedList com a implementació de queue");
     	while (miss.size()>0) {
     		System.out.println(miss.poll());  //recupera i elimina el cap de la cua, primer element de la llista
@@ -40,8 +41,9 @@ public class Exercici1 {
         stackDeque.push(elem2);
         stackDeque.push(elem3);
         stackDeque.push(elem4);
+        stackDeque.offer(44);   //offer inserta a la primera posició (abaix de la pila), i push apila, posa a sobre de la pila
         
-        printDeque(stackDeque, "Deque (pila) original:");
+        printDeque(stackDeque, "Deque (pila) original:"); //les piles es recorren, consulten des del final cap endavant
         System.out.println(stackDeque);
         
         System.out.println();
@@ -79,12 +81,12 @@ public class Exercici1 {
         Deque<Integer> cpStack = new ArrayDeque<Integer>();   //la copio per no perdre-la de cara a segona crida, invertirPila
         for (Integer elem:stack){
             cpStack.offer(elem);   //no era push, sino offer:encuar   push fa tractament de pila:apila
-           // System.out.println(elem.toString()); //4,3,2,1
+          //  System.out.println(elem.toString()); //4,3,2,1,44  es llegeix des del final, copiant-la des del final
         }
         
         
         while (!cpStack.isEmpty()) {
-            inversStack.push(cpStack.pop());  //pop & push, desapilar per apilar a l'altra
+            inversStack.push(cpStack.pop());  //últim, el 4...pop & push, desapilar per apilar a l'altra
         }
         printDeque(inversStack, "Deque (pila) invertida amb mètode no genèric:");
         System.out.println(inversStack);

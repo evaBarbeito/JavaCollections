@@ -57,7 +57,7 @@ public class Exercici4 {
         for (int i = 0; i < mida; i++) {
             pila.push(cua.removeFirst());
         }
-
+        
         return pila;
     }
 
