@@ -25,15 +25,20 @@ public class Exercici3 {
             if (!pilaDiamants.isEmpty() && pilaDiamants.peekFirst().equals("<") && elem.equals(">")){ 
                 blanc++;
                 pilaDiamants.pop();
+                System.out.println(pilaDiamants);
             }
             else {
                 if (!pilaDiamants.isEmpty() && pilaDiamants.peekFirst().equals("(") && elem.equals(")")){ 
                     negre++;
                     pilaDiamants.pop();
+                    System.out.println(pilaDiamants);
                 }
-                else pilaDiamants.push(elem);
+                else {pilaDiamants.push(elem);
+                		System.out.println(pilaDiamants);
+                }
             }
         }
         System.out.println("A la mina hi "+blanc+" diamants blancs i "+negre+" diamants negres");
+        System.out.println(pilaDiamants);
     }
 }
