@@ -74,7 +74,17 @@ public class Exercici1 {
     // p.ex només números, no strings...  Number:float, Integer, double
     // veure classe demoGenericsBounded <T extends Numer > {
     
-    
+//    public static void invertirPila(Deque<Integer> pila) {
+//		Deque<Integer> pilaInvertida = new ArrayDeque<Integer>();
+//		while (!pila.isEmpty()) {
+//			pilaInvertida.add(pila.pollLast());
+//		}
+//		// while(!pila.isEmpty()) {
+//		// pilaInvertida.push(pila.pop());
+//		// }
+//		System.out.println("Pila no generica: " + pilaInvertida);
+//	}
+
     
     public static void invertirPilaNoGeneric(Deque<Integer> stack) {
         Deque<Integer> inversStack = new ArrayDeque<Integer>();

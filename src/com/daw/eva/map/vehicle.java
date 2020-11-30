@@ -9,7 +9,7 @@ import java.util.Calendar;
 
 /**
  *
- * @author gmartinez
+ * @author 
  */
 public class vehicle {
     String color;

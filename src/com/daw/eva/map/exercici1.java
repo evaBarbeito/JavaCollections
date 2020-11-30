@@ -14,6 +14,8 @@ import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Map.Entry;
+
+
 import java.util.Set;
 
 /**
@@ -49,7 +51,8 @@ public class exercici1 {
         cotxesVsColor = cotxesVsColor("blanco");
         System.out.println();
         System.out.println("-------- 4 ---------");
-        System.out.println("LLista sencera de cotxesVsColor: " + cotxesVsColor);
+        System.out.println("LLista sencera de cotxesVsColor: " );
+        System.out.println( cotxesVsColor);
         
         for (vehicle cotxeTmp:cotxesVsColor){
             System.out.println("    cotxeTmp = " + cotxeTmp);
@@ -191,6 +194,77 @@ public class exercici1 {
     }
    
     
+//    
+// // Volem crear un map on ficarem totes les rutes creades en el menú 20. S'ha d'executar el menú 20 abans.
+// 	// Poden existir rutes amb les mateixes dades (menys el ID, es clar).
+// 	// Crea el mapa que mantingui l'ordre temporal en que es van inserir les rutes.
+// 	// Visualitza de 3 formes diferents el contingut del mapa (veure un dels exemples que hi ha penjat en el moodle).
+// 	// Copia tot el contingut del mapa en comprovacioRendimentTmp.mapaLinkedDeRutes . Alerta: s'ha de crear l'objecte en el constructor.
+// 	//30. Crear un MAP de rutes i visualitzar-lo.
+// 	public static void crearLinkedHashMapDeRutes (ComprovacioRendiment comprovacioRendimentTmp) {
+// 		long tempsInicial;
+// 		long tempsFinal;
+// 		int temps1aForma;
+// 		int temps2aForma;
+// 		int temps3aForma;
+// 		LinkedHashMap<Integer, Ruta_Dades> mapaLinkedDeRutes;
+// 		int clauDelMap;
+// 		
+// 		
+// 		mapaLinkedDeRutes = new LinkedHashMap<Integer, Ruta_Dades>();
+// 		for(Ruta_Dades rutaTmp : comprovacioRendimentTmp.llistaRutes) {
+// 			mapaLinkedDeRutes.put(rutaTmp.getId(), rutaTmp);
+// 		}
+// 		
+// 		// 1a forma de visualitzar el contingut del map.
+// 		// Fem un set amb les entrades del map i el recorrem. Es crea un set on el seu contingut són les entrades del mapa.
+// 		tempsInicial = System.nanoTime();
+// 		Set setTmp = mapaLinkedDeRutes.entrySet();
+// 		Iterator it1 = setTmp.iterator();
+// 		System.out.println("1a forma de visualitzar el contingut del map (map --> set + iterador del set):");
+//         while(it1.hasNext()) {
+//            Map.Entry me = (Map.Entry)it1.next();
+//            System.out.println("Clau del map = " + me.getKey() + ": \n" + me.getValue().toString());
+//         }
+//         tempsFinal = System.nanoTime();
+//         temps1aForma = (int)((tempsFinal - tempsInicial)/1000);
+//         
+//         // 2a forma de visualitzar el contingut del map.
+//         // Fem un iterador que navegui per les claus del mapa. Es crea un set on el seu contingut són les claus del map.
+// 		tempsInicial = System.nanoTime();
+//         System.out.println();
+//         System.out.println("2a forma de visualitzar el contingut del map (iterator de les claus del map):");
+//         Iterator<Integer> it2 = mapaLinkedDeRutes.keySet().iterator();
+//         while (it2.hasNext()) {
+//             clauDelMap = it2.next();
+//             System.out.println(clauDelMap + ": " + mapaLinkedDeRutes.get(clauDelMap));
+//         }
+//         tempsFinal = System.nanoTime();
+//         temps2aForma = (int)((tempsFinal - tempsInicial)/1000);
+//         
+//         // 3a forma de visualitzar el contingut del map.
+//         // Lo mateix que la forma 1 però fent servir un bucle for en comptes d'un iterator.
+//         tempsInicial = System.nanoTime();
+//         System.out.println();
+//         System.out.println("3a forma de visualitzar el contingut del map (for-each del map --> set):");
+//         for (Entry<Integer, Ruta_Dades> dada : mapaLinkedDeRutes.entrySet()) {
+//             System.out.println(dada.getKey() + ": " + dada.getValue().toString());
+//         }
+//         tempsFinal = System.nanoTime();
+//         temps3aForma = (int)((tempsFinal - tempsInicial)/1000);
+// 		
+//         System.out.println();
+//         System.out.println("TEMPS PER 1a FORMA (map --> set + iterador del set): " + temps1aForma);
+//         System.out.println("TEMPS PER 2a FORMA (iterator de les claus del map): " + temps2aForma);
+//         System.out.println("TEMPS PER 3a FORMA (for-each del map --> set): " + temps3aForma);
+// 		
+//         
+//         comprovacioRendimentTmp.mapaLinkedDeRutes.putAll(mapaLinkedDeRutes);
+//         // No fem un return de comprovacioRendimentTmp perquè en realitat quan el rebem per paràmetre, estem rebent un apuntador i no
+//         // el propi objecte.
+//         // EL PROBLEMA ÉS QUE A LLAVORS NO SABEM QUINS MÈTODES MODIFIQUEN EL CONTINGUT DE comprovacioRendimentTmp A MENYS QUE
+//         // MIREM EL SEU CODI.
+// 	}
     
 }
 

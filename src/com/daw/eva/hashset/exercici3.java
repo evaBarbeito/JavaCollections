@@ -47,7 +47,7 @@ public class exercici3 {
     }
 
  
-    public static <T> Set<T> interseccio(Set<T> a, Set<T> b) {
+    public static <T> Set<T> interseccio(Set<T> a, Set<T> b) { //22
         Set<T> interseccio = new HashSet<T>();
         interseccio.addAll(a);
         interseccio.retainAll(b);
@@ -55,7 +55,7 @@ public class exercici3 {
     }
 
  
-    public static  <T> Set<T> resta(Set<T> a, Set<T> b){
+    public static  <T> Set<T> resta(Set<T> a, Set<T> b){   //23
         Set<T> resta = new HashSet<T>();
         resta.addAll(a);
         resta.removeAll(b);
